@@ -1,0 +1,34 @@
+.Control_Visualizer {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+.Control_Visualizer__CenterButton {
+  height: 4rem;
+  width: 4rem;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--secondary);
+}
+.Control_Visualizer__CenterButton:hover,
+.Control_Visualizer__CenterButton:focus {
+  background-color: var(--secondary-dark);
+}
+
+.Control_Visualizer__CenterButton:disabled {
+  background-color: var(--gray-500);
+}
+
+.Control_Visualizer__Button {
+  padding: 0 12px;
+}
+
+.Control_Visualizer__SpeedButton {
+  padding-right: 12px;
+}
+
+.Control_Visualizer__Icon {
+  height: 2rem;
+  width: 2rem;
+  margin: 0;
+}
