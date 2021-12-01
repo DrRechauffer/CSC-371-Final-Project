@@ -16,16 +16,7 @@ const Info = ({
       <h1>{title ? title : 'Select Algorithm'}</h1>
 
       <div className="Info__Body">
-        <article className="Info__Article">
-          {description ? (
-            description
-          ) : (
-            <p>
-              You must select an algorithm before you can visualize it's
-              execution on an array of numbers.
-            </p>
-          )}
-        </article>
+        
 
         <aside className="Info__Aside">
           <h3>Performance</h3>

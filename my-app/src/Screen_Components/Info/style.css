@@ -55,8 +55,5 @@
     padding-right: 5ch;
   }
 
-  .Info__Aside {
-    padding-left: 5ch;
-    border-left: 1px solid var(--text-color);
-  }
+
 }
