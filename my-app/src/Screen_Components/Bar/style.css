@@ -1,6 +1,6 @@
 .Bar {
   background-color: var(--white);
-  color: var(--text-color-dark);
+  color: red !important;
   display: flex;
   flex-direction: column reverse;
   align-items: flex-end;

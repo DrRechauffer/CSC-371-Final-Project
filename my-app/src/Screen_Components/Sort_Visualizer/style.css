@@ -4,11 +4,16 @@
   padding: 0.5rem;
   margin: 1rem 1rem;
   box-shadow: var(--box-shadow-2);
-  background-color: var(--background-color-2);
+  background-color: #3c67de;
   transition: 0.5s ease-in-out;
 }
 
 .Sort_Visualizer__ProgressBar {
   overflow: clip;
   margin: 0.5rem;
+}
+.AudioPlayer {
+  background-color:rgb(15, 17, 121) !important;
+  border-radius: 10px;
+  border: 2px solid blueviolet
 }

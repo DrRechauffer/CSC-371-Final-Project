@@ -16,7 +16,6 @@ const Bar_Top = ({ drawerOpen, toggleDrawer, children }) => {
             iconClass="Bar_Top__Icon"
             onClick={toggleDrawer}
           />
-          <span className="Bar_Top__Title">Sort Visualizer</span>
           &nbsp;
           &nbsp;
           &nbsp;

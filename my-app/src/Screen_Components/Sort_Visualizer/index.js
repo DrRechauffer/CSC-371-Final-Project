@@ -7,6 +7,9 @@ import Control_Visualizer from '../Control_Visualizer';
 
 import Color from '../Color';
 import Info from '../Info';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
+import song from "../../music/First-Snow-Free-Download.mp3"
 
 class Sort_Visualizer extends Component {
   state = {
@@ -197,6 +200,14 @@ class Sort_Visualizer extends Component {
         <Color {...this.props.Color} />
 
         <Info {...this.props.desc} />
+        <h1>Feeling bored of waiting for the sorting to be complete? No worry, let's get some music.</h1>
+        <AudioPlayer
+            className="AudioPlayer"
+            src={song}
+            autoPlay={false}
+            controls
+            loop={false}
+        />
       </div>
     );
   }

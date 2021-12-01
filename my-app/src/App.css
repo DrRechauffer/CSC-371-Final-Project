@@ -13,7 +13,7 @@
   text-align: center;
   color: var(--text-color);
 
-  background-color: var(--background-color-1);
+  background-color: #3c67de;
   transition: color 250ms;
   transition: background-color 500ms ease-in-out;
 }
@@ -31,8 +31,3 @@
   display: none;
 }
 
-@media (max-width: 599px) {
-  .App {
-    --footer-height: 160px;
-  }
-}

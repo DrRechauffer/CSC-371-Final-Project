@@ -1,12 +1,10 @@
 .Bar_Top {
-  /* Default Styles */
   --bar-top-row-height: 64px;
   --bar-top-title-left-padding: 20px;
   --bar-top-section-vertical-padding: 8px;
   --bar-top-section-horizontal-padding: 12px;
 
   --bar-top-content-display: none;
-  --bar-top-mobile-breakpoint: 599px;
 
   display: flex;
   position: fixed;
@@ -14,7 +12,7 @@
   justify-content: space-between;
   width: 100%;
 
-  background-color: var(--background-color-3);
+  background-color: #6f3199;
   z-index: 105;
   box-shadow: var(--elevation-umbra-4) var(--elevation-umbra-color),
     var(--elevation-penumbra-4) var(--elevation-penumbra-color);
@@ -22,15 +20,6 @@
   transition: background-color 500ms ease-in-out;
 }
 
-/* Default Mobile Styles */
-@media (max-width: 599px) {
-  .Bar_Top {
-    --bar-top-row-height: 56px;
-    --bar-top-section-vertical-padding: 4px;
-    --bar-top-section-horizontal-padding: 4px;
-    --bar-top-menu-button-display: inline-block;
-  }
-}
 
 @media (min-width: 768px) {
   .Bar_Top {

@@ -15,7 +15,7 @@
   text-align: center;
   word-spacing: 0.25rem;
 
-  background-color: var(--background-color-2);
+  background-color: #352e87;
   box-shadow: 0px -2px 1px -1px rgba(0, 0, 0, 0.2);
 
   transition: background-color 500ms ease-in-out;
