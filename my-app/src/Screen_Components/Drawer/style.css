@@ -1,5 +1,4 @@
-/* BLOCK */
-.AppDrawer {
+.Drawer {
   box-sizing: border-box;
   position: absolute;
   top: 56px;
@@ -19,8 +18,7 @@
   transition: all 500ms ease-in-out;
 }
 
-/* ELEMENTS */
-.AppDrawer__Content {
+.Drawer__Content {
   height: 224px;
   display: flex;
   flex-direction: column;
@@ -28,13 +26,12 @@
   align-items: flex-start;
 }
 
-/* MODIFIERS */
-.AppDrawer_open {
+.Drawer_open {
   left: 0;
   opacity: 1;
 }
 
-.AppDrawer_closed {
+.Drawer_closed {
   left: -256px;
   opacity: 0.25;
 }
