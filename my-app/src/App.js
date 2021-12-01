@@ -126,7 +126,7 @@ class App extends Component {
     let theme = `App`;
     if (this.state.appDrawerOpen) theme += ` App_modal_open`;
 
-    const colorKey = this.ALGORITHM_KEY[this.state.algorithm];
+    const Color = this.ALGORITHM_KEY[this.state.algorithm];
     const desc = this.ALGORITHM_DESC[this.state.algorithm];
 
     const controls = (
@@ -160,7 +160,7 @@ class App extends Component {
           <Sort_Visualizer
             array={this.state.array}
             trace={this.state.trace}
-            colorKey={colorKey}
+            Color={Color}
             desc={desc}
           />
         </main>
