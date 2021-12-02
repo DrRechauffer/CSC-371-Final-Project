@@ -7,30 +7,30 @@ import Drawer from './Screen_Components/Drawer';
 import Sort_Visualizer from './Screen_Components/Sort_Visualizer';
 import Footer from './Screen_Components/Footer';
 
-import BubbleSort, {
-  BubbleSortKey,
-  BubbleSortDesc
-} from './Sorts/BubbleSort';
-import SelectionSort, {
-  SelectionSortKey,
-  SelectionSortDesc
-} from './Sorts/SelectionSort';
-import InsertionSort, {
-  InsertionSortKey,
-  InsertionSortDesc
-} from './Sorts/InsertionSort';
-import MergeSort, {
-  MergeSortKey,
-  MergeSortDesc
-} from './Sorts/MergeSort';
-import QuickSort, {
-  QuickSortKey,
-  QuickSortDesc
-} from './Sorts/QuickSort';
-import HeapSort, {
-  HeapSortKey,
-  HeapSortDesc
-} from './Sorts/HeapSort';
+import Bubble, {
+  BubbleKey,
+  BubbleDesc
+} from './Sorts/Bubble';
+import Selection, {
+  SelectionKey,
+  SelectionDesc
+} from './Sorts/Selection';
+import Insertion, {
+  InsertionKey,
+  InsertionDesc
+} from './Sorts/Insertion';
+import Merge, {
+  MergeKey,
+  MergeDesc
+} from './Sorts/Merge';
+import Quick, {
+  QuickKey,
+  QuickDesc
+} from './Sorts/Quick';
+import Heap, {
+  HeapKey,
+  HeapDesc
+} from './Sorts/Heap';
 
 
 class App extends Component {
@@ -43,32 +43,32 @@ class App extends Component {
   };
 
   ALGORITHM = {
-    'Bubble Sort': BubbleSort,
-    'Selection Sort': SelectionSort,
-    'Insertion Sort': InsertionSort,
-    'Merge Sort': MergeSort,
-    'Quick Sort': QuickSort,
-    'Heap Sort': HeapSort,
+    'Bubble Sort': Bubble,
+    'Selection Sort': Selection,
+    'Insertion Sort': Insertion,
+    'Merge Sort': Merge,
+    'Quick Sort': Quick,
+    'Heap Sort': Heap,
    
   };
 
   ALGORITHM_KEY = {
-    'Bubble Sort': BubbleSortKey,
-    'Selection Sort': SelectionSortKey,
-    'Insertion Sort': InsertionSortKey,
-    'Merge Sort': MergeSortKey,
-    'Quick Sort': QuickSortKey,
-    'Heap Sort': HeapSortKey,
+    'Bubble Sort': BubbleKey,
+    'Selection Sort': SelectionKey,
+    'Insertion Sort': InsertionKey,
+    'Merge Sort': MergeKey,
+    'Quick Sort': QuickKey,
+    'Heap Sort': HeapKey,
     
   };
 
   ALGORITHM_DESC = {
-    'Bubble Sort': BubbleSortDesc,
-    'Selection Sort': SelectionSortDesc,
-    'Insertion Sort': InsertionSortDesc,
-    'Merge Sort': MergeSortDesc,
-    'Quick Sort': QuickSortDesc,  
-    'Heap Sort': HeapSortDesc,
+    'Bubble Sort': BubbleDesc,
+    'Selection Sort': SelectionDesc,
+    'Insertion Sort': InsertionDesc,
+    'Merge Sort': MergeDesc,
+    'Quick Sort': QuickDesc,  
+    'Heap Sort': HeapDesc,
    
   };
 

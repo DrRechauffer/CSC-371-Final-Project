@@ -4,10 +4,9 @@ import './style.css';
 
 const Info = ({
   title,
-  description,
-  worstCase,
-  avgCase,
-  bestCase,
+  worst,
+  average,
+  best,
   space
 }) => {
   return (
@@ -25,21 +24,21 @@ const Info = ({
               <tr>
                 <td>Worst-case time complexity</td>
                 <td>
-                  <code>{worstCase}</code>
+                  <code>{worst}</code>
                 </td>
               </tr>
 
               <tr>
                 <td>Average time complexity</td>
                 <td>
-                  <code>{avgCase}</code>
+                  <code>{average}</code>
                 </td>
               </tr>
 
               <tr>
                 <td>Best-case time complexity</td>
                 <td>
-                  <code>{bestCase}</code>
+                  <code>{best}</code>
                 </td>
               </tr>
 
@@ -59,10 +58,9 @@ const Info = ({
 
 Info.propTypes = {
   title: PropTypes.string,
-  description: PropTypes.object,
-  worstCase: PropTypes.object,
-  avgCase: PropTypes.object,
-  bestCase: PropTypes.object,
+  worst: PropTypes.object,
+  average: PropTypes.object,
+  best: PropTypes.object,
   space: PropTypes.object
 };
 

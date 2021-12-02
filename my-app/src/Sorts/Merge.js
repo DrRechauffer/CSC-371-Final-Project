@@ -1,9 +1,8 @@
 import React from 'react';
 import { newTrace, addToTrace, createKey } from './helpers';
 
-const MergeSort = (nums) => {
-  // Initial State
-  const trace = newTrace(nums);
+const Merge = (numbers) => {
+  const trace = newTrace(numbers);
 
   function merge(original, start, mid, end) {
     const left = original.slice(start, mid);
@@ -44,68 +43,58 @@ const MergeSort = (nums) => {
     right.length = 0;
   }
 
-  function recursiveMergeSort(original, start, end) {
+  function recursiveMerge(original, start, end) {
     const length = end - start;
     if (length < 2) {
-      // original = []
       if (length < 1) return original;
-      // original = [x]
       else return [original[start]];
     }
 
     const midPoint = Math.floor((start + end) / 2);
 
-    // Visualize: First Half
     addToTrace(
       trace,
       original,
       [],
       [...Array(midPoint - start).keys()].map((i) => i + start)
     );
-    recursiveMergeSort(original, start, midPoint);
+    recursiveMerge(original, start, midPoint);
 
-    // Visualize: Second Half
     addToTrace(
       trace,
       original,
       [],
       [...Array(end - midPoint).keys()].map((i) => i + midPoint)
     );
-    recursiveMergeSort(original, midPoint, end);
+    recursiveMerge(original, midPoint, end);
 
     merge(original, start, midPoint, end);
   }
 
-  recursiveMergeSort(nums, 0, nums.length);
+  recursiveMerge(numbers, 0, numbers.length);
 
-  // Visualize: Mark all elements as sorted
-  addToTrace(trace, nums, [...Array(nums.length).keys()]);
+  addToTrace(trace, numbers, [...Array(numbers.length).keys()]);
   return trace;
 };
 
-export const MergeSortKey = createKey(
+export const MergeKey = createKey(
   'Call Merge Sort',
   null,
   'Overwrite from axillary array'
 );
-export const MergeSortDesc = {
+export const MergeDesc = {
   title: 'Merge Sort',
-  description: (
-    <div>
-      
-    </div>
-  ),
-  worstCase: (
+  worst: (
     <span>
       O(<em>n</em> log <em>n</em>)
     </span>
   ),
-  avgCase: (
+  average: (
     <span>
       O(<em>n</em> log <em>n</em>)
     </span>
   ),
-  bestCase: (
+  best: (
     <span>
       O(<em>n</em> log <em>n</em>)
     </span>
@@ -116,4 +105,4 @@ export const MergeSortDesc = {
     </span>
   )
 };
-export default MergeSort;
+export default Merge;

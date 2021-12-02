@@ -8,12 +8,10 @@ import {
   createKey
 } from './helpers';
 
-const QuickSort = (nums) => {
-  // Initial State
-  const trace = newTrace(nums);
+const Quick = (numbers) => {
+  const trace = newTrace(numbers);
 
   function choosePivot(array, start, end) {
-    // randomly pick an element between start and end;
     return Math.floor(Math.random() * (end - start)) + start;
   }
 
@@ -21,12 +19,10 @@ const QuickSort = (nums) => {
     let i = start + 1;
     let j = start + 1;
 
-    // Visualize: Keep pivot marked
     addToTrace(trace, array, lastSorted(trace), [start]);
 
     while (j <= end) {
       if (array[j] < array[start]) {
-        // Visualize: Mark item that is less than pivot
         addToTrace(
           trace,
           array,
@@ -39,7 +35,6 @@ const QuickSort = (nums) => {
 
         swap(array, i, j);
 
-        // Visualize: Move item to lesser list
         addToTrace(
           trace,
           array,
@@ -54,7 +49,6 @@ const QuickSort = (nums) => {
       j += 1;
     }
 
-    // Visualize: Mark center position
     addToTrace(
       trace,
       array,
@@ -66,7 +60,6 @@ const QuickSort = (nums) => {
     );
     swap(array, start, i - 1);
 
-    // Visualize: Move pivot to center
     addToTrace(
       trace,
       array,
@@ -79,10 +72,9 @@ const QuickSort = (nums) => {
     return i - 1;
   }
 
-  function recursiveQuickSort(array, start, end) {
+  function recursiveQuick(array, start, end) {
     if (start >= end) {
       if (start === end) {
-        // Visualize: Mark only item as sorted
         addToTrace(trace, array, [...lastSorted(trace), start]);
       }
       return null;
@@ -90,54 +82,46 @@ const QuickSort = (nums) => {
 
     let pivot = choosePivot(array, start, end);
 
-    // Visualize: Mark chosen pivot
     addToTrace(trace, array, lastSorted(trace), [pivot]);
 
     swap(array, start, pivot);
 
-    // Visualize: Move chosen pivot to start
     addToTrace(trace, array, lastSorted(trace), [pivot]);
 
     pivot = partition(array, start, end);
 
-    // Visualize: Mark pivot after partition as sorted
     addToTrace(trace, array, [...lastSorted(trace), pivot]);
 
-    recursiveQuickSort(array, start, pivot - 1);
-    recursiveQuickSort(array, pivot + 1, end);
+    recursiveQuick(array, start, pivot - 1);
+    recursiveQuick(array, pivot + 1, end);
   }
 
-  recursiveQuickSort(nums, 0, nums.length - 1);
+  recursiveQuick(numbers, 0, numbers.length - 1);
 
   return trace;
 };
 
-export const QuickSortKey = createKey(
+export const QuickKey = createKey(
   'Comparing',
   'Swapping',
   null,
   'Less than pivot'
 );
 
-export const QuickSortDesc = {
+export const QuickDesc = {
   title: 'Quick Sort',
-  description: (
-    <div>
-     
-    </div>
-  ),
-  worstCase: (
+  worst: (
     <span>
       O(<em>n</em>
       <sup>2</sup>)
     </span>
   ),
-  avgCase: (
+  average: (
     <span>
       O(<em>n</em>log<em>n</em>)
     </span>
   ),
-  bestCase: (
+  best: (
     <span>
       O(<em>n</em>log<em>n</em>)
     </span>
@@ -149,4 +133,4 @@ export const QuickSortDesc = {
   )
 };
 
-export default QuickSort;
+export default Quick;
